@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_GEOCODE</name>
+	<author>Nikolya</author>
+	<creationDate>November 2016</creationDate>
+	<copyright>Copyright (C) 20011 - 2016 SNAKAM, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>k_m_i@i.ua</authorEmail>
+	<authorUrl>http://sankam.com.ua</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_SYSTEM_GEOCODE_XML_DESCRIPTION</description>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<update> <!-- Runs on update -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+		</sql>
+	</update>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<files>
+		<filename plugin="geocode">geocode.php</filename>
+		<filename>index.html</filename>
+		<folder>sql</folder>
+		<folder>languages</folder>
+	</files>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB/en-GB.plg_system_geocode.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_geocode.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_geocode.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_geocode.sys.ini</language>
+	</languages>
+</extension>
